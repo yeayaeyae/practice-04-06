@@ -1,0 +1,8 @@
+{
+  "name": "practice-04",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "check": "node checks.js"
+  }
+}

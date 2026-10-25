@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ПР8 — двоичные потоки</title>
+  <link rel="stylesheet" href="./src/styles.css">
+</head>
+<body>
+<main class="container">
+  <header>
+    <h1>Практическая работа №8</h1>
+    <p>Двоичные потоки и двоичные файлы.</p>
+  </header>
+
+  <section class="panel">
+    <h2>Запись</h2>
+    <form id="record-form" class="form-grid">
+      <label>str (строка) <input name="str" value="Hello World!" autocomplete="off"></label>
+      <label>v1 (int) <input name="v1" value="25" autocomplete="off"></label>
+      <label>d1 (double) <input name="d1" value="17.2" autocomplete="off"></label>
+      <button type="submit">Записать data.bin</button>
+      <button type="button" id="open-button">Открыть .bin…</button>
+      <input type="file" id="file-input" accept=".bin" hidden>
+    </form>
+    <p id="status" class="message" role="status"></p>
+  </section>
+
+  <section class="panel">
+    <h2>Содержимое файла (hex)</h2>
+    <pre id="hex" class="output"></pre>
+  </section>
+</main>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>

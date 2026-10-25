@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ПР4 — вещественные числа</title>
+  <link rel="stylesheet" href="./src/styles.css">
+</head>
+<body>
+<main class="container">
+  <header>
+    <h1>Практическая работа №4</h1>
+    <p>Вещественные числа. Бесконечность и не число. Тригонометрические функции.</p>
+  </header>
+
+  <section class="panel">
+    <h2>Калькулятор вещественных чисел</h2>
+    <form id="calc-form" class="form-grid">
+      <label>Число 1 <input name="value1" value="0.1" autocomplete="off"></label>
+      <label>Операция
+        <select name="operation">
+          <option value="+">+</option>
+          <option value="-">−</option>
+          <option value="*">×</option>
+          <option value="/">÷</option>
+        </select>
+      </label>
+      <label>Число 2 <input name="value2" value="0.2" autocomplete="off"></label>
+      <label>Формат
+        <select name="format">
+          <option value="g">g — автоматически</option>
+          <option value="G">G — автоматически, верхний регистр</option>
+          <option value="e">e — экспоненциальный</option>
+          <option value="E">E — экспоненциальный, верхний регистр</option>
+          <option value="f">f — фиксированный</option>
+        </select>
+      </label>
+      <label>Точность <input name="precision" type="number" min="0" max="100" value="6"></label>
+      <button type="submit">Вычислить</button>
+    </form>
+    <p id="calc-result" class="message" role="status"></p>
+  </section>
+
+  <section class="panel">
+    <h2>Тригонометрия</h2>
+    <div id="trig-form" class="form-grid">
+      <label>Угол / значение <input id="angle" value="30" autocomplete="off"></label>
+      <fieldset class="radio-group">
+        <legend>Единицы</legend>
+        <label><input type="radio" name="unit" id="radioButton_grad" checked> Градусы</label>
+        <label><input type="radio" name="unit" id="radioButton_rad"> Радианы</label>
+      </fieldset>
+      <div class="actions">
+        <button type="button" data-function="sin">sin</button>
+        <button type="button" data-function="cos">cos</button>
+        <button type="button" data-function="asin">arcsin</button>
+      </div>
+    </div>
+    <p id="trig-result" class="message" role="status"></p>
+  </section>
+</main>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>

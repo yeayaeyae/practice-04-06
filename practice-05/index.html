@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ПР5 — функции работы со строками</title>
+  <link rel="stylesheet" href="./src/styles.css">
+</head>
+<body>
+<main class="container">
+  <header>
+    <h1>Практическая работа №5</h1>
+    <p>Функции работы со строками и диалоговые сообщения.</p>
+  </header>
+
+  <section class="panel">
+    <h2>Исходные данные</h2>
+    <div class="form-grid">
+      <label>Строка 1 <input id="text1" value="Библиотека Qt " autocomplete="off"></label>
+      <label>Строка 2 <input id="text2" value="JavaScript" autocomplete="off"></label>
+      <label>Найти <input id="from" value="Qt" autocomplete="off"></label>
+      <label>Заменить на <input id="to" value="JS" autocomplete="off"></label>
+      <label>Начало <input id="prefix" value="Библ" autocomplete="off"></label>
+      <label>Конец <input id="suffix" value="Qt" autocomplete="off"></label>
+    </div>
+    <div class="form-grid">
+      <label>Шаблон <input id="template" value="Дата: %1.%2.%3. %1 %4 шёл дождь." size="40"></label>
+      <label>Аргументы через «;» <input id="args" value="17; 09; 2024; сентября"></label>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Операции</h2>
+    <div id="actions" class="actions">
+      <button type="button" data-action="describe">Анализ строки</button>
+      <button type="button" data-action="compare">Сравнить</button>
+      <button type="button" data-action="concat">Объединить</button>
+      <button type="button" data-action="replace">Заменить</button>
+      <button type="button" data-action="upper">Верхний регистр</button>
+      <button type="button" data-action="split">split / join</button>
+      <button type="button" data-action="edges">startsWith / endsWith</button>
+      <button type="button" data-action="format">Форматировать (arg)</button>
+      <button type="button" data-action="information">Информация</button>
+      <button type="button" data-action="warning">Предупреждение</button>
+      <button type="button" data-action="critical">Ошибка с кнопками</button>
+    </div>
+    <pre id="output" class="output" role="status"></pre>
+  </section>
+</main>
+
+<dialog id="message-box">
+  <h3 data-role="title"></h3>
+  <p data-role="text"></p>
+  <div class="actions" data-role="actions"></div>
+</dialog>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
