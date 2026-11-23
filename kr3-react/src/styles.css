@@ -1,0 +1,49 @@
+:root {
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  color: #172b43;
+  background: #edf2f7;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+button:disabled { cursor: wait; opacity: 0.6; }
+button:focus-visible, input:focus-visible { outline: 3px solid #789cdb; outline-offset: 3px; }
+
+.page { width: min(920px, calc(100% - 40px)); margin: 44px auto; }
+.page-header { margin-bottom: 28px; }
+.course { color: #4d6480; font-size: 14px; margin: 0 0 10px; }
+h1 { font-size: 38px; letter-spacing: -0.6px; margin: 0; }
+h2 { font-size: 21px; margin: 0; }
+.panel { background: #fff; border: 1px solid #d4dfeb; border-radius: 14px; padding: 28px; margin-bottom: 22px; }
+.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.count { font-size: 14px; color: #576d86; }
+.task-filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+.filter { border: 1px solid #c4d2e1; border-radius: 7px; padding: 11px 18px; color: #315071; background: #f8fafc; }
+.filter.active { background: #245bb2; border-color: #245bb2; color: #fff; font-weight: 600; }
+.filter:hover { border-color: #245bb2; }
+.task-list { list-style: none; padding: 0; margin: 0; }
+.task { display: flex; align-items: center; gap: 16px; border-top: 1px solid #e1e8f0; min-height: 70px; padding: 17px 0; }
+.task-id { color: #667c94; font-size: 14px; min-width: 34px; }
+.task-title { flex: 1; line-height: 1.5; overflow-wrap: anywhere; }
+.status { font-size: 14px; color: #70521b; background: #fff3dc; padding: 6px 11px; border-radius: 16px; white-space: nowrap; }
+.status.completed { color: #166247; background: #e2f3eb; }
+.empty-state { padding: 30px 0; text-align: center; color: #576d86; }
+form { margin-top: 20px; }
+label { display: block; font-size: 14px; color: #4d6480; margin-bottom: 8px; }
+.form-row { display: flex; gap: 12px; }
+input { min-width: 0; flex: 1; padding: 13px 15px; border: 1px solid #b9cadc; border-radius: 7px; color: #172b43; }
+.submit { border: 0; border-radius: 7px; background: #245bb2; color: #fff; padding: 13px 22px; }
+.error { color: #a02020; }
+
+@media (max-width: 580px) {
+  .page { margin: 24px auto; width: calc(100% - 24px); }
+  .panel { padding: 20px; }
+  h1 { font-size: 31px; }
+  .task { gap: 10px; flex-wrap: wrap; }
+  .task-title { min-width: 60%; }
+  .form-row { flex-direction: column; }
+}
